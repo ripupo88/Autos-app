@@ -1,0 +1,98 @@
+export const store = {
+    conf: {
+        siteName: "Mi Web App",
+    },
+    autos: [
+        {
+            marca: "Volkswagen",
+            modelo: "Polo TSI 1.0 95CV",
+            oferta: 9900,
+            precio: 10800,
+            matric: 2018,
+            kms: 32696,
+            img: [
+                "http://www.autos3demayo.com/wp-content/uploads/2020/06/IMG_6984_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/06/IMG_6985_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/06/IMG_6987_opt1.jpg",
+            ],
+        },
+        {
+            marca: "Audi",
+            modelo: "A1 Sportback S-Tronic 1.4 TFSI",
+            oferta: 9690,
+            precio: 11200,
+            matric: 2011,
+            kms: 53200,
+            img: [
+                "http://www.autos3demayo.com/wp-content/uploads/2020/03/IMG_6395_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/03/IMG_6398_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/03/IMG_6393_opt.jpg",
+            ],
+        },
+        {
+            marca: "Citroen",
+            modelo: "C4 Cactus 1.2 Puretech 82CV",
+            oferta: 8890,
+            precio: 10200,
+            matric: 2017,
+            kms: 46000,
+            img: [
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_7748_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_7758_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_7757_opt.jpg",
+            ],
+        },
+        {
+            marca: "Hyundai",
+            modelo: "Elantra 1.6 Mpi 128CV",
+            oferta: 8990,
+            precio: 9990,
+            matric: 2016,
+            kms: 50790,
+            img: [
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_6782_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_6779_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_6784_opt.jpg",
+            ],
+        },
+        {
+            marca: "Seat",
+            modelo: "Ibiza 1.0 TSI 125CV",
+            oferta: 10490,
+            precio: 11290,
+            matric: 2018,
+            kms: 39300,
+            img: [
+                "http://www.autos3demayo.com/wp-content/uploads/2020/03/IMG_7569_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/03/IMG_7570_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/03/IMG_7571_opt.jpg",
+            ],
+        },
+        {
+            marca: "Skoda ",
+            modelo: "Fabia 1.0 95CV",
+            oferta: 8990,
+            precio: 10000,
+            matric: 2018,
+            kms: 44508,
+            img: [
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_7818.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_7829.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/07/IMG_7830.jpg",
+            ],
+        },
+        {
+            marca: "Volkswagen ",
+            modelo: "Beetle 1.2 TSI 105CV",
+            oferta: 13990,
+            precio: 15900,
+            matric: 2011,
+            kms: 64154,
+            img: [
+                "http://www.autos3demayo.com/wp-content/uploads/2020/06/IMG_7661_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/06/IMG_7662_opt.jpg",
+                "http://www.autos3demayo.com/wp-content/uploads/2020/06/IMG_7671_opt.jpg",
+            ],
+        },
+    ],
+};
