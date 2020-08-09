@@ -17,7 +17,7 @@ export const App = () => {
             <Router>
                 <RPRNavbar />
                 <MDBContainer>
-                    <MDBRow center style={{ marginTop: "100px" }}>
+                    <MDBRow center style={{ marginTop: "50px" }}>
                         <RouterApp />
                     </MDBRow>
                 </MDBContainer>

@@ -33,7 +33,7 @@ const RPRNavbar1 = React.memo(({ props }) => {
     };
 
     return (
-        <MDBNavbar color="elegant-color" dark expand="md" fixed="top">
+        <MDBNavbar color="elegant-color" dark expand="md">
             <MDBNavbarBrand>
                 <strong>{siteName}</strong>
             </MDBNavbarBrand>

@@ -40,7 +40,7 @@ const RPRCards1 = React.memo(({ props }) => {
                             >
                                 <div
                                     className="view overlay zoom"
-                                    style={{ height: "25vh" }}
+                                    style={{ height: "210px" }}
                                 >
                                     <RPRImg
                                         className="img-fluid"
@@ -60,12 +60,12 @@ const RPRCards1 = React.memo(({ props }) => {
                                     src={auto.img[0]}
                                 /> */}
 
-                                <h6 className="text-left p-1 mt-1">
+                                <h6 className="align-middle text-left p-1 mt-1">
                                     <b>{auto.marca}</b> {auto.modelo}
                                 </h6>
 
                                 <div className="rounded-bottom mdb-color  lighten-3 pt-0">
-                                    <ul className="list-unstyled list-inline float-left ml-2 mb-1 mt-2">
+                                    <ul className="list-unstyled align-middle list-inline float-left ml-2 mb-1 mt-2">
                                         <li className="list-inline-item pr-2">
                                             <MDBIcon far icon="calendar" />{" "}
                                             {auto.matric}
