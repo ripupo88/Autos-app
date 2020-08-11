@@ -23,7 +23,7 @@ const RPRCards1 = React.memo(({ props }) => {
     return (
         <>
             <MDBRow>
-                <MDBCol className="text-center" lg="12">
+                <MDBCol className="text-center mt-3" lg="12">
                     <div>
                         <h1>Nuestra exposición</h1>
                     </div>

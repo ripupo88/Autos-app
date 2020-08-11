@@ -15,7 +15,7 @@ export const NosotrosPage = () => {
             <h2 className="h1-responsive font-weight-bold text-center my-3">
                 Contactanos
             </h2>
-            <p className="text-center w-responsive mx-auto pb-3">
+            <p className="text-center text-muted w-responsive mx-auto pb-3">
                 Ubicados en Santa Cruz de tenerife, disponemos de una exposicion
                 de conches de ocacion a precios increibles y en optimas
                 consiciones. Con nosotros podras financiar el 100% de la compra.
@@ -23,7 +23,7 @@ export const NosotrosPage = () => {
                 nosotros.
             </p>
             <MDBRow>
-                <MDBCol lg="5" className="lg-0 mb-4">
+                <MDBCol md="5" className="lg-0 mb-4">
                     <MDBCard>
                         <MDBCardBody>
                             <h3 className="mt-2">
@@ -75,7 +75,43 @@ export const NosotrosPage = () => {
                         </MDBCardBody>
                     </MDBCard>
                 </MDBCol>
-                <MDBCol lg="7">
+                <MDBCol md="7">
+                    <div className="p-3">
+                        <h4 className=" mb-4 ">
+                            <u>Informacion</u>
+                        </h4>
+                        <div>
+                            <b> Horario</b>
+                        </div>
+                        <p className="text-muted">
+                            <MDBIcon far icon="clock" /> Lun-Vie 8:00-14:00 /
+                            17:00-20:00
+                        </p>
+                        <div>
+                            <b>Telefonos</b>
+                        </div>
+                        <p className="text-muted">
+                            <MDBIcon icon="phone" /> 922 35 65 65 <br />
+                            <MDBIcon icon="mobile-alt mr-1" /> 659 75 32 48
+                        </p>
+                        <div>
+                            <b> Correo</b>
+                        </div>
+                        <p className="text-muted">
+                            <MDBIcon far icon="envelope" /> miempresa@gmail.com
+                        </p>
+                        <div>
+                            <b> Dirección</b>
+                        </div>
+                        <p className="text-muted">
+                            <MDBIcon icon="map-marker-alt" /> Edf Ahlers, 1
+                            planta, Av. Tres de Mayo, 30, 38005 Santa Cruz de
+                            Tenerife
+                        </p>
+                    </div>
+                </MDBCol>
+
+                <MDBCol lg="12" className="lg-0 mb-4 mt-4">
                     <div
                         id="map-container"
                         className="rounded z-depth-1-half map-container"
@@ -91,7 +127,7 @@ export const NosotrosPage = () => {
                         />
                     </div>
                     <br />
-                    <MDBRow className="text-center">
+                    <MDBRow className="text-center text-muted">
                         <MDBCol md="4">
                             <MDBBtn
                                 tag="a"
@@ -115,8 +151,8 @@ export const NosotrosPage = () => {
                             >
                                 <MDBIcon icon="phone" />
                             </MDBBtn>
-                            <p>922 23 65 22</p>
-                            <p className="mb-md-0">Lun - Sab, 8:00-14:00</p>
+                            <div>922 23 65 22</div>
+                            <div className="mb-md-0">Lun - Sab, 8:00-14:00</div>
                         </MDBCol>
                         <MDBCol md="4">
                             <MDBBtn
@@ -127,8 +163,8 @@ export const NosotrosPage = () => {
                             >
                                 <MDBIcon icon="envelope" />
                             </MDBBtn>
-                            <p>info@gmail.com</p>
-                            <p className="mb-md-0">sale@gmail.com</p>
+                            <div>empresa@gmail.com</div>
+                            <div className="mb-md-0">ventas@gmail.com</div>
                         </MDBCol>
                     </MDBRow>
                 </MDBCol>
