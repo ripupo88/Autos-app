@@ -10,7 +10,7 @@ export const RouterApp = () => {
             <Route exact path="/nosotros">
                 <NosotrosPage />
             </Route>
-            <Route exact path="/car">
+            <Route exact path="/car/:id/:marca/:modelo">
                 <CarPage />
             </Route>
             <Route path="/">

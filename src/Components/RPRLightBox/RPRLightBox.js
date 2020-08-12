@@ -1,29 +1,14 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React, { Component, useState } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
-const images = [
-    "//placekitten.com/1500/500",
-    "//placekitten.com/4000/3000",
-    "//placekitten.com/800/1200",
-    "//placekitten.com/1500/1500",
-];
-
-export const RPRLightBox = () => {
-    let state = {
-        photoIndex: 0,
-        isOpen: true,
-    };
-
-    const { photoIndex, isOpen } = state;
+export const RPRLightBox = ({ images }) => {
+    const [isOpen, setIsOpen] = useState(true);
+    const [photoIndex, setPhotoIndex] = useState(0);
 
     return (
         <div>
-            <button
-                type="button"
-                onClick={() => this.setState({ isOpen: true })}
-            >
+            <button type="button" onClick={() => setIsOpen(true)}>
                 Open Lightbox
             </button>
 
@@ -34,18 +19,14 @@ export const RPRLightBox = () => {
                     prevSrc={
                         images[(photoIndex + images.length - 1) % images.length]
                     }
-                    onCloseRequest={() => this.setState({ isOpen: false })}
+                    onCloseRequest={() => setIsOpen(false)}
                     onMovePrevRequest={() =>
-                        this.setState({
-                            photoIndex:
-                                (photoIndex + images.length - 1) %
-                                images.length,
-                        })
+                        setPhotoIndex(
+                            (photoIndex + images.length - 1) % images.length
+                        )
                     }
                     onMoveNextRequest={() =>
-                        this.setState({
-                            photoIndex: (photoIndex + 1) % images.length,
-                        })
+                        setPhotoIndex((photoIndex + 1) % images.length)
                     }
                 />
             )}

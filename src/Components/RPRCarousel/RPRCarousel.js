@@ -11,21 +11,36 @@ import {
 import { appContext } from "../../Core/context/context";
 import { RPRImg } from "../RPRImg/RPRImg";
 
-export const RPRCarousel = () => {
-    const { state, dispatch } = useContext(appContext);
-    let data = [];
-    const { marca, modelo, oferta, img } = state.autos.map((car) => {
-        data = [
-            ...data,
-            {
-                marca: car.marca,
-                modelo: car.modelo,
-                precio: car.oferta,
-                url: car.img[0],
-            },
-        ];
-    });
+export const RPRCarousel = ({ id = 0 }) => {
+    const { state } = useContext(appContext);
 
+    let data = [];
+    if (id === 0) {
+        state.autos.map((car) => {
+            data = [
+                ...data,
+                {
+                    marca: car.marca,
+                    modelo: car.modelo,
+                    precio: car.oferta,
+                    url: car.img[0],
+                },
+            ];
+        });
+    } else {
+        const auto = state.autos.filter((a) => a.id === id * 1);
+        auto[0].img.map((cadaimg) => {
+            data = [
+                ...data,
+                {
+                    marca: "",
+                    modelo: "",
+                    precio: "",
+                    url: cadaimg,
+                },
+            ];
+        });
+    }
     return <RPRCarousel1 props={data} />;
 };
 const RPRCarousel1 = ({ props }) => {
@@ -47,7 +62,7 @@ const RPRCarousel1 = ({ props }) => {
                                 <MDBView>
                                     <div
                                         className="view overlay zoom"
-                                        style={{ height: "510px" }}
+                                        style={{ height: "480px" }}
                                     >
                                         <RPRImg
                                             className="img-fluid"

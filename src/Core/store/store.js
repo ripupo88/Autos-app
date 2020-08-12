@@ -4,6 +4,7 @@ export const store = {
     },
     autos: [
         {
+            id: 1,
             marca: "Volkswagen",
             modelo: "Polo TSI 1.0 95CV",
             oferta: 9900,
@@ -17,6 +18,7 @@ export const store = {
             ],
         },
         {
+            id: 2,
             marca: "Audi",
             modelo: "A1 Sportback S-Tronic 1.4 TFSI",
             oferta: 9690,
@@ -30,6 +32,7 @@ export const store = {
             ],
         },
         {
+            id: 3,
             marca: "Citroen",
             modelo: "C4 Cactus 1.2 Puretech 82CV",
             oferta: 8890,
@@ -43,6 +46,7 @@ export const store = {
             ],
         },
         {
+            id: 4,
             marca: "Hyundai",
             modelo: "Elantra 1.6 Mpi 128CV",
             oferta: 8990,
@@ -56,6 +60,7 @@ export const store = {
             ],
         },
         {
+            id: 5,
             marca: "Seat",
             modelo: "Ibiza 1.0 TSI 125CV",
             oferta: 10490,
@@ -69,6 +74,7 @@ export const store = {
             ],
         },
         {
+            id: 6,
             marca: "Skoda ",
             modelo: "Fabia 1.0 95CV",
             oferta: 8990,
@@ -82,6 +88,7 @@ export const store = {
             ],
         },
         {
+            id: 7,
             marca: "Volkswagen ",
             modelo: "Beetle 1.2 TSI 105CV",
             oferta: 13990,
