@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { MDBBtn, MDBCol, MDBContainer, MDBRow } from "mdbreact";
 import { RPRLightBox } from "../Components/RPRLightBox/RPRLightBox";
 import { RPRCarousel } from "../Components/RPRCarousel/RPRCarousel";
@@ -12,111 +12,89 @@ export const CarPage = () => {
     return <CarPage1 auto={auto} />;
 };
 const CarPage1 = ({ auto }) => {
+    const [isOpen, setIsOpen] = useState(false);
     const { img } = auto[0];
     return (
         <>
+            <h1 className="mb-4">Volkswagen polo (2018)</h1>
             <MDBCol md="8">
-                <RPRCarousel id={auto[0].id} />
-                <RPRLightBox images={img} />
+                <div onClick={() => setIsOpen(true)}>
+                    <RPRCarousel id={auto[0].id} />
+                </div>
+                <RPRLightBox
+                    images={img}
+                    isOpen={isOpen}
+                    setIsOpen={setIsOpen}
+                />
             </MDBCol>
             <MDBCol md="4">
                 <div className="p-0">
-                    <h4 className=" mb-4 ">
-                        <u>Descripción</u>
-                    </h4>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Precio:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">9.900 €</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Marca/modelo:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">Volkswagen Polo</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Versión:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">1.0 TSI</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Kilometros:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">32.696 KMS</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Matriculación:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">2018</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Combustible:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">Gasolina</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Potencia:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">95CV</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Nº de puertas:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">5</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Tipo de cambio:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">Manual</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Color:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">Blanco puro</p>
-                        </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <b>Garantia:</b>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <p className="text-muted">1 año</p>
-                        </MDBCol>
-                    </MDBRow>
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Precio: </b>
+                                9.900 €
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Marca/modelo: </b>
+                                Volkswagen Polo
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Versión: </b>
+                                1.0 TSI
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Kilometros: </b>
+                                32.696 KMS
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Matriculación: </b>
+                                2018
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Combustible: </b>
+                                Gasolina
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Potencia: </b>
+                                95CV
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Nº de puertas: </b>5
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Tipo de cambio: </b>
+                                Manual
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="text-muted">
+                                <b>Color: </b>
+                                Blanco puro
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </MDBCol>
 
             <MDBCol md="12">
-                <h3>Volkswagen Polo</h3>
+                <h3>Información</h3>
                 <p className="text-muted">
                     Perfecto estado, Luz diurna LED , Llantas de aleación de 18
                     (Opcionaal), Volante multifuncion , Pantalla táctil,

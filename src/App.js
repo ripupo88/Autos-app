@@ -8,6 +8,7 @@ import { RPRFooter } from "./Components/RPRFooter/RPRFooter";
 import { store } from "./Core/store/store";
 import { RouterApp } from "./Routers/RouterApp";
 import { BrowserRouter as Router } from "react-router-dom";
+import ScrollToTop from "./Components/RPRScrollTop/RPRScrollTop";
 
 export const App = () => {
     const [state, dispatch] = useReducer(reducer, store);
@@ -15,13 +16,16 @@ export const App = () => {
     return (
         <appContext.Provider value={{ state, dispatch }}>
             <Router>
-                <RPRNavbar />
-                <MDBContainer>
-                    <MDBRow center style={{ marginTop: "50px" }}>
-                        <RouterApp />
-                    </MDBRow>
-                </MDBContainer>
-                <RPRFooter />
+                <>
+                    <ScrollToTop />
+                    <RPRNavbar />
+                    <MDBContainer>
+                        <MDBRow center style={{ marginTop: "50px" }}>
+                            <RouterApp />
+                        </MDBRow>
+                    </MDBContainer>
+                    <RPRFooter />
+                </>
             </Router>
         </appContext.Provider>
     );

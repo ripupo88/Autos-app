@@ -2,16 +2,11 @@ import React, { Component, useState } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
-export const RPRLightBox = ({ images }) => {
-    const [isOpen, setIsOpen] = useState(true);
+export const RPRLightBox = ({ images, isOpen, setIsOpen }) => {
     const [photoIndex, setPhotoIndex] = useState(0);
 
     return (
-        <div>
-            <button type="button" onClick={() => setIsOpen(true)}>
-                Open Lightbox
-            </button>
-
+        <>
             {isOpen && (
                 <Lightbox
                     mainSrc={images[photoIndex]}
@@ -30,6 +25,6 @@ export const RPRLightBox = ({ images }) => {
                     }
                 />
             )}
-        </div>
+        </>
     );
 };

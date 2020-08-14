@@ -12,6 +12,7 @@ import {
 } from "mdbreact";
 import { appContext } from "../../Core/context/context";
 import { RPRImg } from "../RPRImg/RPRImg";
+import { NavLink } from "react-router-dom";
 
 export const RPRCards = () => {
     const { state } = useContext(appContext);
@@ -47,9 +48,13 @@ const RPRCards1 = React.memo(({ props }) => {
                                         url={auto.img[0]}
                                     />
                                     <div className="mask flex-center ">
-                                        <p className="btn elegant-color white-text">
-                                            VER VEHÍCULO
-                                        </p>
+                                        <NavLink
+                                            to={`/car/${auto.id}/${auto.marca}/${auto.modelo}`}
+                                        >
+                                            <p className="btn elegant-color white-text">
+                                                VER VEHÍCULO
+                                            </p>
+                                        </NavLink>
                                     </div>
                                 </div>
                                 {/* <MDBCardImage

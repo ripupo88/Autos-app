@@ -60,7 +60,7 @@ const RPRNavbar1 = React.memo(({ props }) => {
                             }}
                             to="/nosotros"
                         >
-                            Nosotrs
+                            Nosotros
                         </NavLink>
                     </MDBNavItem>
                     <MDBNavItem>
@@ -71,7 +71,7 @@ const RPRNavbar1 = React.memo(({ props }) => {
                             }}
                             to="/faq"
                         >
-                            Pricing
+                            Admin
                         </NavLink>
                     </MDBNavItem>
                     {/* <MDBNavItem>
